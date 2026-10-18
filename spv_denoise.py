@@ -1,4 +1,4 @@
-"""Entrauschen der Vorgänger-Demos, wortgleich übernommen (Daubechies-DWT, Schwellen, SURE, universale Schwelle, Testsignale von Donoho und Johnstone). Reine Funktionen, nur numpy.
+"""Entrauschen der Vorgänger-Demos, übernommen bis auf Modulbezüge und Standardwerte (Daubechies-DWT, Schwellen, SURE, universale Schwelle, Testsignale von Donoho und Johnstone). Reine Funktionen, nur numpy.
 """
 
 import math

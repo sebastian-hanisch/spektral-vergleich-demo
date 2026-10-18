@@ -1,4 +1,4 @@
-"""Zeit-Frequenz-Verfahren der Vorgänger-Demos, wortgleich übernommen (Gauß-STFT, Neuzuordnung und Synchrosqueezing, Morlet-CWT mit Kamm, analytisches Signal). Reine Funktionen, nur numpy.
+"""Zeit-Frequenz-Verfahren der Vorgänger-Demos, übernommen bis auf Modulbezüge und Standardwerte (Gauß-STFT, Neuzuordnung und Synchrosqueezing, Morlet-CWT mit Kamm, analytisches Signal). Reine Funktionen, nur numpy.
 """
 
 import math

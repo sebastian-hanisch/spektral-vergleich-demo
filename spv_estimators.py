@@ -1,4 +1,4 @@
-"""Schätzer der Vorgänger-Demos, wortgleich übernommen (Periodogramm, Welch, Slepian-Taper und Multitaper, Burg und Ordnungswahl, MUSIC, ESPRIT, Drei-Bin-Schätzer, Fisher-g, F-Test, Vorfilterung, Lomb-Scargle, Abtastmuster).
+"""Schätzer der Vorgänger-Demos, übernommen bis auf Modulbezüge und Standardwerte (Periodogramm, Welch, Slepian-Taper und Multitaper, Burg und Ordnungswahl, MUSIC, ESPRIT, Drei-Bin-Schätzer, Fisher-g, F-Test, Vorfilterung, Lomb-Scargle, Abtastmuster).
 
 Herkunft je Abschnitt in den Kommentaren; die Funktionen sind in den Quell-Demos mit eigenen Orakeltests gesichert und dort mutationsgetestet. Reine Funktionen, nur numpy.
 """

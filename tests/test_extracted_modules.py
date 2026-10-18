@@ -1,4 +1,4 @@
-"""Die Verfahren in spv_estimators.py, spv_timefreq.py und spv_denoise.py sind wortgleich aus den Vorgängerdemos übernommen.
+"""Die Verfahren in spv_estimators.py, spv_timefreq.py und spv_denoise.py sind aus den Vorgängerdemos übernommen, bis auf Modulbezüge und Standardwerte.
 
 Liegen die Quellrepos neben diesem Repo (lokal ja, in der CI nein), wird jede Funktion mit ihrer Quelle verglichen (nach denselben Ersetzungen wie beim Übernehmen); sonst bleibt der Test übersprungen.
 In den Quellrepos sind die Funktionen mit eigenen Orakeltests gesichert und mutationsgetestet."""

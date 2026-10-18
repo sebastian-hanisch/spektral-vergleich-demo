@@ -56,7 +56,7 @@ st.title("⚖️ Welches Verfahren, gemessen woran?")
 st.markdown(
     """
 Jedes Verfahren dieser Reihe hat eine Aufgabe, in der es glänzt. Der **Vergleich** entscheidet aber nicht allein die Rechnung, sondern die **Wahl der Szenarien**: Das AR-Spektrum gewinnt jedes Szenario mit autoregressivem
-Hintergrund und verliert, sobald der Hintergrund eine Kerbe oder ein Bandpass ist; ein Test auf weißes Rauschen schlägt in gefärbtem Rauschen fast immer an. Hier laufen die Verfahren der Reihe an **sieben Aufgaben mit
+Hintergrund und verliert in fünf von sechs Szenarien mit Kerbe oder Bandpass die Siege (im mittleren Reuegrad bleibt es vorn); ein Test auf weißes Rauschen schlägt in gefärbtem Rauschen fast immer an. Hier laufen die Verfahren der Reihe an **sieben Aufgaben mit
 bekannter Wahrheit**. Als Maß dient der **Reuegrad** (englisch *regret*): wie viel schlechter ein Verfahren in einem Szenario ist als das beste dort. Sein Mittel hängt am **Szenarienmix**, sein Maximum zeigt, was **robust** ist.
 
 Dies ist die sechzehnte und letzte Demo der Reihe „Spektral- und Wavelet-Analyse“. Neue Verfahren kommen nicht vor; alles ist **simuliert**, die Wahrheit ist bekannt. Weiter unten: **🔬 Experimente**,
@@ -167,7 +167,7 @@ for col, (label, value, delta, help_text) in zip(st.columns(len(metrics)), metri
 st.plotly_chart(build_live(a), width="stretch", key="live")
 CAPTIONS = {
     "A": "Geschätztes Spektrum (dB) je Verfahren gegen das wahre (rot gestrichelt) in einer Realisierung; der Fehler ist der quadratische Mittelwert der Differenz der Logspektren in dB über die inneren Bins.",
-    "B": "Spektren und MUSIC-Pseudospektrum in dB gegen ihr Maximum, rot gestrichelt die wahren Linien, Kreuze die ESPRIT-Schätzungen. „Aufgelöst“ heißt: Maximum an beiden Linienlagen und Einbruch auf unter die Hälfte dazwischen.",
+    "B": "Spektren und MUSIC-Pseudospektrum in dB gegen ihr Maximum, rot gestrichelt die wahren Linien, Kreuze die ESPRIT-Schätzungen; MUSIC und ESPRIT bekommen die wahre Linienzahl vorgegeben. „Aufgelöst“ heißt: Maximum an beiden Linienlagen und Einbruch auf unter die Hälfte dazwischen.",
     "C": "Hann-Periodogramm in der Umgebung der wahren Linie (rot gestrichelt); die Balken zeigen den Fehler der Frequenzschätzer in Bins gegen die Cramér-Rao-Schranke.",
     "D": "Periodogramm der Reihe, rot gestrichelt die wahre Linie. „Erkannt“ gilt gegen die auf 5 % Falschalarm kalibrierte Schwelle (aus Rauschläufen); die Rauten zeigen die Schwelle aus der Theorie.",
     "E": "Lomb-Scargle-Leistung je Messzeit-Art, rot gestrichelt die wahre Linie. Erkannt: Maximum über der 95-%-Schwelle aus Rauschläufen und innerhalb von 0,05 der wahren Lage.",
@@ -223,7 +223,7 @@ ln = ev.exp_lines()
 st.caption(f"Zwei gleich starke Linien bei 0,2 und im Abstand Δ Bins (n = {C.N_B}), {C.RUNS_B} Läufe je Szenario: Anteil der Läufe, in denen das Verfahren beide Linien trennt (in %).")
 _table(ev.table_rows("B", ln["b"]))
 st.plotly_chart(build_sweep("B", ln["b"], "delta", list(C.B_DELTAS), "snr", list(C.B_SNRS)), width="stretch", key="exp_sweep_b")
-st.caption(f"Eine Linie mit zufälliger Frequenz, {C.RUNS_C} Läufe je Szenario: Wurzel des mittleren quadratischen Fehlers der Frequenz, geteilt durch die Cramér-Rao-Schranke (1 = bestmöglich für erwartungstreue Schätzer).")
+st.caption(f"Eine Linie mit zufälliger Frequenz, {C.RUNS_C} Läufe je Szenario: Wurzel des mittleren quadratischen Fehlers der Frequenz, geteilt durch die Cramér-Rao-Schranke (1 = Cramér-Rao-Schranke für erwartungstreue Schätzer; Werte etwas darunter liegen im Stichprobenrauschen). MUSIC und ESPRIT bekommen die wahre Linienzahl vorgegeben.")
 _table(ev.table_rows("C", ln["c"]))
 st.plotly_chart(build_sweep("C", ln["c"], "snr", list(C.C_SNRS), "n", list(C.C_NS)), width="stretch", key="exp_sweep_c")
 st.plotly_chart(build_heatmap("B", ln["b"]), width="stretch", key="exp_heat_b")
@@ -235,7 +235,7 @@ getattr(st, kind_v)(text)
 st.markdown("#### Eine Linie im Rauschen finden")
 dt = ev.exp_detection()
 st.caption(f"Linie bei {C.D_LINE:g} in weißem und in AR(1)-Rauschen (n = {C.N_D}), {C.RUNS_D} Läufe je Szenario, Schwellen aus {C.RUNS_D_NULL} Rauschläufen auf wirklich 5 % Falschalarm kalibriert: Anteil erkannter Linien (in %). "
-           "Gepunktet die Rate der Tests mit Theorieschwelle (nominell 5 %).")
+           "Gepunktet die Rate der Tests mit Theorieschwelle (nominell 5 %; der F-Test liegt schon bei weißem Rauschen darüber).")
 _table(ev.table_rows("D", dt["cells"]))
 st.plotly_chart(build_sweep("D", dt["cells"], "snr", list(C.D_SNRS), "bg", list(C.D_BGS), nominal=True), width="stretch", key="exp_sweep_d")
 kind_v, text = ev.verdict_detection(dt)
@@ -288,8 +288,8 @@ st.markdown(
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
 | **Die Szenarien sind repräsentativ** | Sie sind es nicht: Sie sind gewählt. Mit anderen Hintergründen, Längen und Rauschabständen kippt der Sieger; der Reuegrad gilt nur für diese Zellen. | eigene Szenarien aus den Anwendungsdaten, Sensitivitätsanalyse des Mix |
-| **Der Mix ist bekannt** | Die Gewichte der Szenarien bestimmen den mittleren Reuegrad; der größte Reuegrad (Minimax) hängt nicht davon ab, wohl aber von der Wahl der Zellen. | Minimax-Auswahl, mehrere Mischungen vergleichen |
-| **Ein Verfahren, eine Einstellung** | Jedes Verfahren läuft mit festen Einstellungen (Fenster, Ordnung, Taper); mit besserer Einstellung kippt mancher Abstand. | Einstellungen je Szenario abstimmen, auf Daten prüfen |
+| **Der Mix ist bekannt** | Die Gewichte der Szenarien bestimmen den mittleren Reuegrad; der größte Reuegrad (Minimax) hängt für Anteile zwischen 0 und 100 % nicht davon ab (an den Rändern fallen Zellen mit Gewicht null heraus), wohl aber von der Wahl der Zellen. | Minimax-Auswahl, mehrere Mischungen vergleichen |
+| **Ein Verfahren, eine Einstellung** | Jedes Verfahren läuft mit festen Einstellungen (Fenster, Ordnung, Taper; MUSIC und ESPRIT bekommen die wahre Linienzahl vorgegeben, nur ESPRIT mit MDL-Zählung schätzt sie); mit besserer Einstellung kippt mancher Abstand. | Einstellungen je Szenario abstimmen, auf Daten prüfen |
 | **Die Wahrheit ist bekannt** | Nur in der Simulation. Mit echten Daten fehlt der Vergleichswert, dann bleiben Schwellen aus Rauschläufen und Kreuzvalidierung. | simulierte Referenz, Rauschläufe |
 | **Kalibrierung gilt** | Die Schwellen der Tests sind für das gewählte Rauschen kalibriert; mit anderem Rauschen schlagen sie anders an. | Kalibrierung am eigenen Rauschmodell |
 """,
@@ -310,7 +310,7 @@ Minimax-Wahl: $\arg\min_m \rho^{\max}_m$.
 
 **Fehler Spektrum.** $e = \sqrt{\overline{\left(10 \log_{10}(\hat S(f_k)/S(f_k))\right)^2}}$ über die inneren Bins $k$ (vier an jedem Rand abgezogen).
 
-**Cramér-Rao-Schranke.** Für eine Linie der Amplitude $A$ in weißem Rauschen der Varianz $\sigma^2$ mit $n$ Abtastwerten: $\operatorname{var}(\hat f) \ge 12 \sigma^2 / (A^2 (2\pi)^2 n (n^2 - 1))$ (Frequenz in Zyklen je Abtastwert); in Bins mal $n$.
+**Cramér-Rao-Schranke.** Für eine Linie der Amplitude $A$ in weißem Rauschen der Varianz $\sigma^2$ mit $n$ Abtastwerten: $\operatorname{var}(\hat f) \ge 6 \sigma^2 / (\pi^2 A^2 n (n^2 - 1))$ (Frequenz in Zyklen je Abtastwert, Signal-Rausch-Verhältnis $A^2/(2\sigma^2)$ je Abtastwert); in Bins mal $n$.
 
 **Kalibrierung.** Die Schwelle eines Tests ist das 95-%-Quantil der Prüfgröße in $N$ Rauschläufen; Erkennungsrate = Anteil der Läufe mit Linie, in denen die Prüfgröße die Schwelle überschreitet.
 

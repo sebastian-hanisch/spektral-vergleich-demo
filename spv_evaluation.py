@@ -332,7 +332,7 @@ def verdict_lines(res: dict) -> tuple[str, str]:
     cc = {(c["params"]["n"], c["params"]["snr"]): c for c in res["c"]}
     c1 = cc[(64, 10.0)]["values"]
     sc = res["summary_c"]
-    return "info", (f"Zwei Linien im Abstand von einem Bin (n = 64, 10 dB je Linie): ESPRIT trennt sie in {de(cb['ESPRIT (p = 4)'], 1)} %, MUSIC in {de(cb['MUSIC (p = 4)'], 1)} %, das AR-Spektrum mit Ordnung 16 in "
+    return "info", (f"Zwei Linien im Abstand von einem Bin (n = 64, 10 dB je Linie): ESPRIT trennt sie in {de(cb['ESPRIT (p = 4)'], 1)} %, MUSIC in {de(cb['MUSIC (p = 4)'], 1)} % (beide mit vorgegebener Linienzahl), das AR-Spektrum mit Ordnung 16 in "
                     f"{de(cb['AR (Burg, p = 16)'], 1)} %, mit BIC-Ordnung in {de(cb['AR (Burg, BIC)'], 1)} %, das Hann-Periodogramm in {de(cb['Hann-Periodogramm'], 1)} % und das Multitaper in "
                     f"{de(cb['Multitaper (NW = 2)'], 1)} %. Für eine einzelne Linie (n = 64, 10 dB) liegt der Fehler der Spitze des Rechteck-Periodogramms bei {de(c1['Spitze (Rechteck, 16-fach, Parabel)'], 2)}, "
                     f"ESPRIT bei {de(c1['ESPRIT (p = 2)'], 2)}, MUSIC bei {de(c1['MUSIC (p = 2)'], 2)}, Jacobsen bei {de(c1['Jacobsen (3 Bins)'], 2)} und der AR-Spitze bei {de(c1['AR-Spitze (Burg, p = 8)'], 1)} "
@@ -347,7 +347,7 @@ def verdict_detection(res: dict) -> tuple[str, str]:
     return "warning", (f"Bei AR(1)-Hintergrund (φ = 0,8) schlägt Fishers Test auf weißes Rauschen in {de(100 * fa['Fisher-g (weißer Hintergrund)'], 1)} % der reinen Rauschläufe an; auf wirklich 5 % kalibriert findet er eine Linie von −12 dB in "
                        f"{de(col['values']['Fisher-g (weißer Hintergrund)'], 0)} % der Läufe, mit AR(2)-Vorfilterung in {de(col['values']['Fisher-g nach AR(2)-Vorfilterung'], 0)} % "
                        f"und der harmonische F-Test in {de(col['values']['Harmonischer F-Test (NW = 4)'], 0)} %. Bei weißem Hintergrund und −6 dB sind es {de(white['Fisher-g (weißer Hintergrund)'], 0)} %, "
-                       f"{de(white['Fisher-g nach AR(2)-Vorfilterung'], 0)} % und {de(white['Harmonischer F-Test (NW = 4)'], 0)} %. Der F-Test mit Theorieschwelle hat bei AR(1)-Hintergrund nominell {de(100 * fa['Harmonischer F-Test (NW = 4)'], 0)} % Falschalarm statt 5 %.")
+                       f"{de(white['Fisher-g nach AR(2)-Vorfilterung'], 0)} % und {de(white['Harmonischer F-Test (NW = 4)'], 0)} %. Der F-Test mit Theorieschwelle hat bei AR(1)-Hintergrund {de(100 * fa['Harmonischer F-Test (NW = 4)'], 0)} % und schon bei weißem Hintergrund {de(100 * cells[('weiß', -6.0)]['extra']['false_alarm_nominal']['Harmonischer F-Test (NW = 4)'], 0)} % Falschalarm statt 5 %.")
 
 
 def verdict_irregular(res: dict) -> tuple[str, str]:

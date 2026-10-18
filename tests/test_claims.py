@@ -123,7 +123,7 @@ def test_detection_verdict_numbers():
     fa = d["extra"]["false_alarm_nominal"]
     has(text, f"in {de(100 * fa['Fisher-g (weißer Hintergrund)'], 1)} % der reinen Rauschläufe", f"in {de(d['values']['Fisher-g (weißer Hintergrund)'], 0)} % der Läufe", f"Vorfilterung in {de(d['values']['Fisher-g nach AR(2)-Vorfilterung'], 0)} %",
         f"F-Test in {de(d['values']['Harmonischer F-Test (NW = 4)'], 0)} %", f"sind es {de(w['Fisher-g (weißer Hintergrund)'], 0)} %, {de(w['Fisher-g nach AR(2)-Vorfilterung'], 0)} % und {de(w['Harmonischer F-Test (NW = 4)'], 0)} %",
-        f"nominell {de(100 * fa['Harmonischer F-Test (NW = 4)'], 0)} % Falschalarm statt 5 %")
+        f"hat bei AR(1)-Hintergrund {de(100 * fa['Harmonischer F-Test (NW = 4)'], 0)} % und schon bei weißem Hintergrund {de(100 * RES.find('D', bg='weiß', snr=-6.0)['extra']['false_alarm_nominal']['Harmonischer F-Test (NW = 4)'], 0)} % Falschalarm statt 5 %")
     assert (de(100 * fa["Fisher-g (weißer Hintergrund)"], 1), de(d["values"]["Fisher-g (weißer Hintergrund)"], 0)) == ("99,2", "5")
 
 
@@ -186,7 +186,7 @@ def test_readme_detection_row():
     fa = d["extra"]["false_alarm_nominal"]
     summ = get("detection")["summary"]
     has(README, f"in {de(100 * fa['Fisher-g (weißer Hintergrund)'], 1)} % der reinen Rauschläufe", "Linie von −12 dB in 5 %, mit AR(2)-Vorfilterung in 72 % und der harmonische F-Test in 38 %", "sind es 68 %, 82 % und 52 %",
-        f"hat bei AR(1)-Hintergrund {de(100 * fa['Harmonischer F-Test (NW = 4)'], 0)} % Falschalarm statt 5 %", "gewinnt alle zehn Szenarien")
+        f"und bei AR(1)-Hintergrund {de(100 * fa['Harmonischer F-Test (NW = 4)'], 0)} % Falschalarm statt 5 %", "ist in allen zehn Szenarien Sieger oder gleichauf")
     assert summ["Fisher-g nach AR(2)-Vorfilterung"]["wins"] == 10 and len(RES.cells("D")) == 10
 
 
@@ -200,7 +200,7 @@ def test_readme_irregular_and_time_frequency_rows():
         f"Neuzuordnung ({de(f10['Neu zugeordnet'], 5)}), Spektrogramm ({de(f10['Spektrogramm (Gauß)'], 5)}) und Synchrosqueezing ({de(f10['Synchrosqueezing'], 5)}) vor dem CWT-Kamm ({de(f10['CWT-Kamm (Morlet)'], 5)})",
         f"({de(f0['Synchrosqueezing'], 4)} gegen {de(f0['Spektrogramm (Gauß)'], 4)})", f"Phasenableitung ({de(s20['Phasenableitung (21 geglättet)'], 4)}) und der CWT-Kamm ({de(s20['CWT-Kamm (Morlet)'], 4)}) vor dem Spektrogramm ({de(s20['Spektrogramm (Gauß)'], 4)})",
         f"Neuzuordnung {de(sf['Neu zugeordnet']['mean'], 2)} (größter {de(sf['Neu zugeordnet']['max'], 2)}), Phasenableitung {de(sf['Phasenableitung (21 geglättet)']['mean'], 2)} ({de(sf['Phasenableitung (21 geglättet)']['max'], 2)}), "
-        f"Synchrosqueezing {de(sf['Synchrosqueezing']['mean'], 2)} ({de(sf['Synchrosqueezing']['max'], 2)})")
+        f"Synchrosqueezing {de(sf['Synchrosqueezing']['mean'], 2)} ({de(sf['Synchrosqueezing']['max'], 2)}, in der rauschfreien Chirp-Zelle vom Frequenzraster bestimmt)")
 
 
 def test_readme_denoise_row():
@@ -231,7 +231,7 @@ def test_readme_limit_about_interpolation_and_the_mix():
 
 
 def test_app_intro_and_limits_statements():
-    has(APP, "sechzehnte und letzte Demo", "sieben Aufgaben mit\nbekannter Wahrheit", "Neue Verfahren kommen nicht vor", "Das AR-Spektrum gewinnt jedes Szenario mit autoregressivem\nHintergrund und verliert, sobald der Hintergrund eine Kerbe oder ein Bandpass ist")
+    has(APP, "sechzehnte und letzte Demo", "sieben Aufgaben mit\nbekannter Wahrheit", "Neue Verfahren kommen nicht vor", "Das AR-Spektrum gewinnt jedes Szenario mit autoregressivem\nHintergrund und verliert in fünf von sechs Szenarien mit Kerbe oder Bandpass die Siege")
     assert len(C.TASKS) == 7 and all(len(m) >= 3 for m in C.METHODS.values())
     cells = RES.cells("A")
     assert all(R.winners("A", c) == [AR] for c in cells if c["params"]["bg"] in C.AR_TYPE) and sum(R.winners("A", c) != [AR] for c in cells if c["params"]["bg"] in C.NON_AR_TYPE) == 5
@@ -245,7 +245,7 @@ def test_app_statement_that_the_vehicle_is_an_unseen_scenario_choice():
 
 
 def test_readme_why_statements():
-    has(README, "In dieser Tabelle gewinnt das AR-Spektrum jedes Szenario mit autoregressivem Hintergrund und verliert bei der Kerbe (n = 256 und 1024) gegen Welch", "in AR(1)-Rauschen nutzlos",
+    has(README, "In dieser Tabelle gewinnt das AR-Spektrum jedes Szenario mit autoregressivem Hintergrund und verliert bei der Kerbe in allen drei Längen (n = 256 und 1024 gegen Welch, n = 64 gegen Multitaper und Welch)", "in AR(1)-Rauschen nutzlos",
         "Synchrosqueezing liegt beim Chirp mit 10 dB gleichauf mit dem Spektrogramm und bricht bei 0 dB ein")
     for n in (256, 1024):
         k = v("A", bg="Kerbe", n=n)
@@ -253,3 +253,31 @@ def test_readme_why_statements():
     f10, f0 = v("F", signal="Chirp", snr=10.0), v("F", signal="Chirp", snr=0.0)
     assert f10["Synchrosqueezing"] == pytest.approx(f10["Spektrogramm (Gauß)"], rel=0.1) and f0["Synchrosqueezing"] > 10 * f0["Spektrogramm (Gauß)"]
     assert max(RES.find("D", bg="AR(1) 0,8", snr=s)["values"]["Fisher-g (weißer Hintergrund)"] for s in C.D_SNRS) <= 5.0           # auf 5 % kalibriert: höchstens der Zufall
+    k64 = v("A", bg="Kerbe", n=64)
+    assert min(k64, key=k64.get) == MT and k64[AR] > k64[WELCH] > k64[MT]
+    s10 = v("F", signal="Sinus-FM", snr=10.0)
+    assert s10["Synchrosqueezing"] > 5 * s10["Spektrogramm (Gauß)"] and "bei der Sinus-FM schon bei 10 dB" in README
+
+
+def test_readme_and_app_qualifications_after_the_independent_review():
+    import spv_estimators as E
+    wh = v("A", bg="weiß", n=1024)
+    assert round(wh[HANN] / wh[AR], 2) == 28.31 and de(wh[AR], 2) == "0,22" and "wo der beste Fehler nur 0,22 dB beträgt" in README
+    b = v("B", delta=1.0, snr=10.0)
+    r = get("lines")
+    mdl = "ESPRIT, Linienzahl per MDL"
+    assert b[mdl] == 93.5 and min(x["values"][mdl] for x in r["b"]) == 85.0 and r["summary_b"][mdl]["max"] == 9.0
+    has(README, "wahre Linienzahl (4) vorgegeben", "trennt in dieser Zelle 93,5 %", "mindestens 85,0 % und größter Reuegrad 9", "ESPRIT mit MDL-Zählung ist die Variante ohne")
+    has(APP, "MUSIC und ESPRIT bekommen die wahre Linienzahl vorgegeben")
+    c = v("C", n=64, snr=10.0)
+    assert c["ESPRIT (p = 2)"] / c["Spitze (Rechteck, 16-fach, Parabel)"] - 1 < math.sqrt(1 / (2 * 300))
+    has(README, "liegt innerhalb der Stichprobenstreuung (300 Läufe, Standardfehler eines RMSE etwa 4 %)")
+    fw = RES.find("D", bg="weiß", snr=-6.0)["extra"]["false_alarm_nominal"]["Harmonischer F-Test (NW = 4)"]
+    assert de(100 * fw, 0) == "14" and "schon bei weißem Rauschen 14 % und bei AR(1)-Hintergrund" in README
+    f0 = v("F", signal="Chirp", snr=None)
+    assert f0["Synchrosqueezing"] / min(f0.values()) == pytest.approx(39.12, abs=0.01) and "vom Frequenzraster bestimmt" in README
+    assert de(math.sqrt(0.25 / 200) * 100, 1) == "3,5" and "bei Aufgabe B mit 200 Läufen 3,5" in README
+    n, snr_db = 64, 10.0
+    var = 6 * (1.0 / (2 * 10 ** (snr_db / 10))) / (math.pi ** 2 * n * (n ** 2 - 1))                  # A = 1, SNR = A^2 / (2 sigma^2)
+    assert math.sqrt(var) * n == pytest.approx(E.crb_bins(n, snr_db), rel=1e-12)
+    assert r"\ge 6 \sigma^2 / (\pi^2 A^2 n (n^2 - 1))" in APP and r"12 \sigma^2 / (A^2" not in APP
