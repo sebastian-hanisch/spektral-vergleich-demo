@@ -1,0 +1,1442 @@
+{
+"version": 1,
+"cells": [
+{
+"task": "A",
+"params": {
+"bg": "Resonanz",
+"n": 64
+},
+"values": {
+"Hann-Periodogramm": 5.656394316453238,
+"Welch (Hann, 50 %, n/4)": 6.614651457076437,
+"Multitaper (NW = 4)": 5.373909093618851,
+"AR (Burg, BIC)": 1.4015841100103517
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 1.3680600685055029
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Resonanz",
+"n": 256
+},
+"values": {
+"Hann-Periodogramm": 6.093627626889112,
+"Welch (Hann, 50 %, n/4)": 2.244288377648799,
+"Multitaper (NW = 4)": 2.1448299658339214,
+"AR (Burg, BIC)": 0.7152929945821788
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 0.7064060639331105
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Resonanz",
+"n": 1024
+},
+"values": {
+"Hann-Periodogramm": 6.114634578074682,
+"Welch (Hann, 50 %, n/4)": 1.5871177453225764,
+"Multitaper (NW = 4)": 1.7298468604421546,
+"AR (Burg, BIC)": 0.31138267352301485
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 0.31138267352301485
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Resonanz + weißes Rauschen",
+"n": 64
+},
+"values": {
+"Hann-Periodogramm": 5.990292446917235,
+"Welch (Hann, 50 %, n/4)": 5.25630317106173,
+"Multitaper (NW = 4)": 4.723448917905043,
+"AR (Burg, BIC)": 2.4804112926603348
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 3.341368862080759
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Resonanz + weißes Rauschen",
+"n": 256
+},
+"values": {
+"Hann-Periodogramm": 6.051439820327463,
+"Welch (Hann, 50 %, n/4)": 2.1891997054557906,
+"Multitaper (NW = 4)": 2.1019866773528104,
+"AR (Burg, BIC)": 1.2515117789247259
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 3.1115259190421494
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Resonanz + weißes Rauschen",
+"n": 1024
+},
+"values": {
+"Hann-Periodogramm": 6.087046279950313,
+"Welch (Hann, 50 %, n/4)": 1.6113893134020814,
+"Multitaper (NW = 4)": 1.7499460303577705,
+"AR (Burg, BIC)": 0.7313585553514769
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 3.0531731154046624
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Steil",
+"n": 64
+},
+"values": {
+"Hann-Periodogramm": 6.148996180325705,
+"Welch (Hann, 50 %, n/4)": 10.01524935574118,
+"Multitaper (NW = 4)": 9.238616417738811,
+"AR (Burg, BIC)": 1.5570883051361577
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 1.490519770451958
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Steil",
+"n": 256
+},
+"values": {
+"Hann-Periodogramm": 6.037351859938753,
+"Welch (Hann, 50 %, n/4)": 2.91057773846637,
+"Multitaper (NW = 4)": 4.0066440973173885,
+"AR (Burg, BIC)": 0.7795302069392772
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 0.7643429810848202
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Steil",
+"n": 1024
+},
+"values": {
+"Hann-Periodogramm": 6.125340493575415,
+"Welch (Hann, 50 %, n/4)": 1.6575986689781743,
+"Multitaper (NW = 4)": 2.1879590909295583,
+"AR (Burg, BIC)": 0.37440048257118264
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 0.37440048257118264
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Zwei scharfe Resonanzen",
+"n": 64
+},
+"values": {
+"Hann-Periodogramm": 7.274771850293795,
+"Welch (Hann, 50 %, n/4)": 15.72847775027465,
+"Multitaper (NW = 4)": 13.197150885281628,
+"AR (Burg, BIC)": 1.7782306021502832
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 1.6945975318533224
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Zwei scharfe Resonanzen",
+"n": 256
+},
+"values": {
+"Hann-Periodogramm": 6.186572248723699,
+"Welch (Hann, 50 %, n/4)": 5.9351254240316065,
+"Multitaper (NW = 4)": 5.018907198234541,
+"AR (Burg, BIC)": 0.764098669366495
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 0.7504975373028542
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Zwei scharfe Resonanzen",
+"n": 1024
+},
+"values": {
+"Hann-Periodogramm": 6.1122002684473635,
+"Welch (Hann, 50 %, n/4)": 2.403578934331569,
+"Multitaper (NW = 4)": 2.247753112818277,
+"AR (Burg, BIC)": 0.40685342934674446
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 0.4051217421090126
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "weiß",
+"n": 64
+},
+"values": {
+"Hann-Periodogramm": 5.798167253375461,
+"Welch (Hann, 50 %, n/4)": 1.4666166282040798,
+"Multitaper (NW = 4)": 1.6379428779017642,
+"AR (Burg, BIC)": 1.03186324415991
+},
+"refs": {},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "weiß",
+"n": 256
+},
+"values": {
+"Hann-Periodogramm": 5.93692773225088,
+"Welch (Hann, 50 %, n/4)": 1.5326766392918016,
+"Multitaper (NW = 4)": 1.6854143633727614,
+"AR (Burg, BIC)": 0.45637384990423735
+},
+"refs": {},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "weiß",
+"n": 1024
+},
+"values": {
+"Hann-Periodogramm": 6.1304783676283705,
+"Welch (Hann, 50 %, n/4)": 1.574974424461188,
+"Multitaper (NW = 4)": 1.7228126356512885,
+"AR (Burg, BIC)": 0.21651790125999193
+},
+"refs": {},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Kerbe",
+"n": 64
+},
+"values": {
+"Hann-Periodogramm": 6.247194851044627,
+"Welch (Hann, 50 %, n/4)": 4.706208681610399,
+"Multitaper (NW = 4)": 4.304743857972676,
+"AR (Burg, BIC)": 5.2835649198656185
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 4.1892416492574895
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Kerbe",
+"n": 256
+},
+"values": {
+"Hann-Periodogramm": 6.002748702995501,
+"Welch (Hann, 50 %, n/4)": 1.9193857711095936,
+"Multitaper (NW = 4)": 1.9324643616852117,
+"AR (Burg, BIC)": 3.3838359082702265
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 3.225300925523049
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Kerbe",
+"n": 1024
+},
+"values": {
+"Hann-Periodogramm": 6.130749750596935,
+"Welch (Hann, 50 %, n/4)": 1.5730019712434475,
+"Multitaper (NW = 4)": 1.7252307063437642,
+"AR (Burg, BIC)": 2.092394365574957
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 3.0306996641568826
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Bandpass",
+"n": 64
+},
+"values": {
+"Hann-Periodogramm": 13.554723768707866,
+"Welch (Hann, 50 %, n/4)": 38.519720363938426,
+"Multitaper (NW = 4)": 38.91308631692195,
+"AR (Burg, BIC)": 7.341229291986615
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 14.41406383408498
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Bandpass",
+"n": 256
+},
+"values": {
+"Hann-Periodogramm": 7.008314949156629,
+"Welch (Hann, 50 %, n/4)": 16.905106343113857,
+"Multitaper (NW = 4)": 35.76863512909851,
+"AR (Burg, BIC)": 9.539050602745357
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 18.322407002068275
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "A",
+"params": {
+"bg": "Bandpass",
+"n": 1024
+},
+"values": {
+"Hann-Periodogramm": 6.235185635427141,
+"Welch (Hann, 50 %, n/4)": 5.1653236651119245,
+"Multitaper (NW = 4)": 32.26950127225897,
+"AR (Burg, BIC)": 9.850245161528203
+},
+"refs": {
+"AR (Burg, feste Ordnung)": 19.353640895815126
+},
+"extra": {
+"runs": 100
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 20.0,
+"delta": 0.75
+},
+"values": {
+"Hann-Periodogramm": 14.5,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 88.0,
+"AR (Burg, BIC)": 45.5,
+"MUSIC (p = 4)": 100.0,
+"ESPRIT (p = 4)": 100.0,
+"ESPRIT, Linienzahl per MDL": 96.5
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 20.0,
+"delta": 1.0
+},
+"values": {
+"Hann-Periodogramm": 17.0,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 100.0,
+"AR (Burg, BIC)": 88.5,
+"MUSIC (p = 4)": 100.0,
+"ESPRIT (p = 4)": 100.0,
+"ESPRIT, Linienzahl per MDL": 97.0
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 20.0,
+"delta": 1.5
+},
+"values": {
+"Hann-Periodogramm": 36.0,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 100.0,
+"AR (Burg, BIC)": 98.5,
+"MUSIC (p = 4)": 100.0,
+"ESPRIT (p = 4)": 100.0,
+"ESPRIT, Linienzahl per MDL": 94.0
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 20.0,
+"delta": 2.5
+},
+"values": {
+"Hann-Periodogramm": 100.0,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 100.0,
+"AR (Burg, BIC)": 100.0,
+"MUSIC (p = 4)": 100.0,
+"ESPRIT (p = 4)": 100.0,
+"ESPRIT, Linienzahl per MDL": 97.0
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 10.0,
+"delta": 0.75
+},
+"values": {
+"Hann-Periodogramm": 14.0,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 14.0,
+"AR (Burg, BIC)": 0.0,
+"MUSIC (p = 4)": 50.0,
+"ESPRIT (p = 4)": 94.0,
+"ESPRIT, Linienzahl per MDL": 85.0
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 10.0,
+"delta": 1.0
+},
+"values": {
+"Hann-Periodogramm": 12.5,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 45.0,
+"AR (Burg, BIC)": 0.5,
+"MUSIC (p = 4)": 96.5,
+"ESPRIT (p = 4)": 100.0,
+"ESPRIT, Linienzahl per MDL": 93.5
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 10.0,
+"delta": 1.5
+},
+"values": {
+"Hann-Periodogramm": 32.5,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 99.0,
+"AR (Burg, BIC)": 16.0,
+"MUSIC (p = 4)": 100.0,
+"ESPRIT (p = 4)": 100.0,
+"ESPRIT, Linienzahl per MDL": 98.0
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "B",
+"params": {
+"snr": 10.0,
+"delta": 2.5
+},
+"values": {
+"Hann-Periodogramm": 95.5,
+"Multitaper (NW = 2)": 0.0,
+"AR (Burg, p = 16)": 100.0,
+"AR (Burg, BIC)": 91.0,
+"MUSIC (p = 4)": 100.0,
+"ESPRIT (p = 4)": 100.0,
+"ESPRIT, Linienzahl per MDL": 94.0
+},
+"refs": {},
+"extra": {
+"runs": 200
+}
+},
+{
+"task": "C",
+"params": {
+"n": 64,
+"snr": 20.0
+},
+"values": {
+"Spitze (Rechteck, 16-fach, Parabel)": 1.5028593863472988,
+"Jacobsen (3 Bins)": 1.4507007054798569,
+"Candan (3 Bins)": 1.4526457526236154,
+"Hann-Spitze (16-fach, Parabel)": 1.480968104942139,
+"MUSIC (p = 2)": 1.073467362492756,
+"ESPRIT (p = 2)": 1.0065246192262383,
+"AR-Spitze (Burg, p = 8)": 12.050154839082428
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"crb": 0.006892452607975191,
+"rmse": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.010358387096849435,
+"Jacobsen (3 Bins)": 0.00999888586087609,
+"Candan (3 Bins)": 0.010012292006134722,
+"Hann-Spitze (16-fach, Parabel)": 0.010207502477236523,
+"MUSIC (p = 2)": 0.0073988229221894465,
+"ESPRIT (p = 2)": 0.006937423236777123,
+"AR-Spitze (Burg, p = 8)": 0.08305512114713855
+}
+}
+},
+{
+"task": "C",
+"params": {
+"n": 64,
+"snr": 10.0
+},
+"values": {
+"Spitze (Rechteck, 16-fach, Parabel)": 1.0306889733208204,
+"Jacobsen (3 Bins)": 1.527216374340761,
+"Candan (3 Bins)": 1.5269774669051697,
+"Hann-Spitze (16-fach, Parabel)": 1.4691002371252233,
+"MUSIC (p = 2)": 1.1788407255460067,
+"ESPRIT (p = 2)": 1.0618025321457367,
+"AR-Spitze (Burg, p = 8)": 4.477491541730089
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"crb": 0.02179584890596923,
+"rmse": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.022464741131549153,
+"Jacobsen (3 Bins)": 0.03328697734185337,
+"Candan (3 Bins)": 0.03328177015148471,
+"Hann-Spitze (16-fach, Parabel)": 0.032020286796104934,
+"MUSIC (p = 2)": 0.025693834338203905,
+"ESPRIT (p = 2)": 0.023142887558624013,
+"AR-Spitze (Burg, p = 8)": 0.09759072912130423
+}
+}
+},
+{
+"task": "C",
+"params": {
+"n": 64,
+"snr": 0.0
+},
+"values": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.994563010230811,
+"Jacobsen (3 Bins)": 1.4627891021903854,
+"Candan (3 Bins)": 1.463550680059129,
+"Hann-Spitze (16-fach, Parabel)": 1.4717696761731944,
+"MUSIC (p = 2)": 1.3661503983343966,
+"ESPRIT (p = 2)": 1.3669598138749453,
+"AR-Spitze (Burg, p = 8)": 2.828436608475113
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"crb": 0.0689245260797519,
+"rmse": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.06854978413661009,
+"Jacobsen (3 Bins)": 0.10082204562309809,
+"Candan (3 Bins)": 0.10087453701677405,
+"Hann-Spitze (16-fach, Parabel)": 0.10144102742878734,
+"MUSIC (p = 2)": 0.09416126875886256,
+"ESPRIT (p = 2)": 0.09421705734139647,
+"AR-Spitze (Burg, p = 8)": 0.19494865278576792
+}
+}
+},
+{
+"task": "C",
+"params": {
+"n": 256,
+"snr": 20.0
+},
+"values": {
+"Spitze (Rechteck, 16-fach, Parabel)": 1.2205634301904706,
+"Jacobsen (3 Bins)": 1.6707964894313416,
+"Candan (3 Bins)": 1.6706819281809786,
+"Hann-Spitze (16-fach, Parabel)": 1.6475845979895045,
+"MUSIC (p = 2)": 1.2271249044362105,
+"ESPRIT (p = 2)": 1.119705628691341,
+"AR-Spitze (Burg, p = 8)": 25.04322405336374
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"crb": 0.0034458318860974353,
+"rmse": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.0042058563867547845,
+"Jacobsen (3 Bins)": 0.005757283818462173,
+"Candan (3 Bins)": 0.005756889059652761,
+"Hann-Spitze (16-fach, Parabel)": 0.0056772995427952595,
+"MUSIC (p = 2)": 0.004228466123930562,
+"ESPRIT (p = 2)": 0.0038583173583873983,
+"AR-Spitze (Burg, p = 8)": 0.08629473997376304
+}
+}
+},
+{
+"task": "C",
+"params": {
+"n": 256,
+"snr": 10.0
+},
+"values": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.9867114123501421,
+"Jacobsen (3 Bins)": 1.5826192329982962,
+"Candan (3 Bins)": 1.5826256727619847,
+"Hann-Spitze (16-fach, Parabel)": 1.6025634196113583,
+"MUSIC (p = 2)": 1.1023551620416077,
+"ESPRIT (p = 2)": 1.0505795868184409,
+"AR-Spitze (Burg, p = 8)": 8.909214383950466
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"crb": 0.010896677194101792,
+"rmse": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.010751875744115763,
+"Jacobsen (3 Bins)": 0.017245290903159405,
+"Candan (3 Bins)": 0.017245361075185525,
+"Hann-Spitze (16-fach, Parabel)": 0.01746261626658087,
+"MUSIC (p = 2)": 0.012012008354019173,
+"ESPRIT (p = 2)": 0.011447826624273388,
+"AR-Spitze (Burg, p = 8)": 0.0970808331949567
+}
+}
+},
+{
+"task": "C",
+"params": {
+"n": 256,
+"snr": 0.0
+},
+"values": {
+"Spitze (Rechteck, 16-fach, Parabel)": 1.0247528686034975,
+"Jacobsen (3 Bins)": 1.586096596818475,
+"Candan (3 Bins)": 1.586134942670601,
+"Hann-Spitze (16-fach, Parabel)": 1.5391488810857703,
+"MUSIC (p = 2)": 1.235067053755672,
+"ESPRIT (p = 2)": 1.1288581336004884,
+"AR-Spitze (Burg, p = 8)": 10.721174311046747
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"crb": 0.034458318860974356,
+"rmse": {
+"Spitze (Rechteck, 16-fach, Parabel)": 0.035311261100037475,
+"Jacobsen (3 Bins)": 0.0546542222774773,
+"Candan (3 Bins)": 0.05465554361107685,
+"Hann-Spitze (16-fach, Parabel)": 0.05303648291896537,
+"MUSIC (p = 2)": 0.0425583343529971,
+"ESPRIT (p = 2)": 0.03889855351641002,
+"AR-Spitze (Burg, p = 8)": 0.3694336429741359
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "weiß",
+"snr": -12.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 12.333333333333334,
+"Fisher-g nach AR(2)-Vorfilterung": 18.0,
+"Harmonischer F-Test (NW = 4)": 9.666666666666666
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.10741165480841999,
+0.0998262584497037,
+16.96010780346294
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.0475,
+"Harmonischer F-Test (NW = 4)": 0.14
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 12.333333333333334,
+"Harmonischer F-Test (NW = 4)": 22.333333333333332
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "weiß",
+"snr": -9.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 30.333333333333332,
+"Fisher-g nach AR(2)-Vorfilterung": 47.0,
+"Harmonischer F-Test (NW = 4)": 25.666666666666668
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.10741165480841999,
+0.0998262584497037,
+16.96010780346294
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.0475,
+"Harmonischer F-Test (NW = 4)": 0.14
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 28.666666666666668,
+"Harmonischer F-Test (NW = 4)": 39.333333333333336
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "weiß",
+"snr": -6.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 68.0,
+"Fisher-g nach AR(2)-Vorfilterung": 82.33333333333333,
+"Harmonischer F-Test (NW = 4)": 52.0
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.10741165480841999,
+0.0998262584497037,
+16.96010780346294
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.0475,
+"Harmonischer F-Test (NW = 4)": 0.14
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 68.0,
+"Harmonischer F-Test (NW = 4)": 71.0
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "weiß",
+"snr": -3.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 99.33333333333333,
+"Fisher-g nach AR(2)-Vorfilterung": 99.66666666666667,
+"Harmonischer F-Test (NW = 4)": 94.0
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.10741165480841999,
+0.0998262584497037,
+16.96010780346294
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.0475,
+"Harmonischer F-Test (NW = 4)": 0.14
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 99.33333333333333,
+"Harmonischer F-Test (NW = 4)": 97.0
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "weiß",
+"snr": 0.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 100.0,
+"Fisher-g nach AR(2)-Vorfilterung": 100.0,
+"Harmonischer F-Test (NW = 4)": 99.66666666666667
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.10741165480841999,
+0.0998262584497037,
+16.96010780346294
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.0475,
+"Harmonischer F-Test (NW = 4)": 0.14
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 100.0,
+"Harmonischer F-Test (NW = 4)": 100.0
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "AR(1) 0,8",
+"snr": -12.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 5.0,
+"Fisher-g nach AR(2)-Vorfilterung": 72.33333333333333,
+"Harmonischer F-Test (NW = 4)": 38.333333333333336
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.3902925166658666,
+0.10741767526738838,
+17.73986995093977
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.9925,
+"Harmonischer F-Test (NW = 4)": 0.15
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 99.0,
+"Harmonischer F-Test (NW = 4)": 57.666666666666664
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "AR(1) 0,8",
+"snr": -9.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 4.333333333333333,
+"Fisher-g nach AR(2)-Vorfilterung": 97.66666666666667,
+"Harmonischer F-Test (NW = 4)": 83.66666666666667
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.3902925166658666,
+0.10741767526738838,
+17.73986995093977
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.9925,
+"Harmonischer F-Test (NW = 4)": 0.15
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 99.0,
+"Harmonischer F-Test (NW = 4)": 94.33333333333333
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "AR(1) 0,8",
+"snr": -6.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 1.3333333333333333,
+"Fisher-g nach AR(2)-Vorfilterung": 100.0,
+"Harmonischer F-Test (NW = 4)": 99.33333333333333
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.3902925166658666,
+0.10741767526738838,
+17.73986995093977
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.9925,
+"Harmonischer F-Test (NW = 4)": 0.15
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 99.33333333333333,
+"Harmonischer F-Test (NW = 4)": 99.66666666666667
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "AR(1) 0,8",
+"snr": -3.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 0.0,
+"Fisher-g nach AR(2)-Vorfilterung": 100.0,
+"Harmonischer F-Test (NW = 4)": 100.0
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.3902925166658666,
+0.10741767526738838,
+17.73986995093977
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.9925,
+"Harmonischer F-Test (NW = 4)": 0.15
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 100.0,
+"Harmonischer F-Test (NW = 4)": 100.0
+}
+}
+},
+{
+"task": "D",
+"params": {
+"bg": "AR(1) 0,8",
+"snr": 0.0
+},
+"values": {
+"Fisher-g (weißer Hintergrund)": 3.6666666666666665,
+"Fisher-g nach AR(2)-Vorfilterung": 100.0,
+"Harmonischer F-Test (NW = 4)": 100.0
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"null_runs": 400,
+"thresholds": [
+0.3902925166658666,
+0.10741767526738838,
+17.73986995093977
+],
+"nominal_thresholds": [
+0.10861962060961966,
+13.770587669304787
+],
+"false_alarm_nominal": {
+"Fisher-g (weißer Hintergrund)": 0.9925,
+"Harmonischer F-Test (NW = 4)": 0.15
+},
+"nominal_rate": {
+"Fisher-g (weißer Hintergrund)": 100.0,
+"Harmonischer F-Test (NW = 4)": 100.0
+}
+}
+},
+{
+"task": "E",
+"params": {
+"line": 1.3,
+"snr": 0.0
+},
+"values": {
+"regelmäßig": 26.333333333333332,
+"Jitter ±0,25": 100.0,
+"zufällig": 100.0,
+"Nachtlücken": 91.66666666666667
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"thresholds": {
+"regelmäßig": 6.804623637476301,
+"Jitter ±0,25": 7.698699074848603,
+"zufällig": 7.8897038841731275,
+"Nachtlücken": 7.659388994411257
+}
+}
+},
+{
+"task": "E",
+"params": {
+"line": 1.3,
+"snr": -3.0
+},
+"values": {
+"regelmäßig": 27.666666666666668,
+"Jitter ±0,25": 88.0,
+"zufällig": 87.0,
+"Nachtlücken": 78.66666666666667
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"thresholds": {
+"regelmäßig": 6.859371208137198,
+"Jitter ±0,25": 7.796185278839584,
+"zufällig": 8.070110034355894,
+"Nachtlücken": 7.282543342251497
+}
+}
+},
+{
+"task": "E",
+"params": {
+"line": 1.3,
+"snr": -6.0
+},
+"values": {
+"regelmäßig": 13.333333333333334,
+"Jitter ±0,25": 33.333333333333336,
+"zufällig": 39.0,
+"Nachtlücken": 34.666666666666664
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"thresholds": {
+"regelmäßig": 7.356837988788485,
+"Jitter ±0,25": 8.266055975420777,
+"zufällig": 7.960057167053225,
+"Nachtlücken": 7.684174543798953
+}
+}
+},
+{
+"task": "E",
+"params": {
+"line": 0.2,
+"snr": 0.0
+},
+"values": {
+"regelmäßig": 100.0,
+"Jitter ±0,25": 100.0,
+"zufällig": 100.0,
+"Nachtlücken": 31.666666666666668,
+"zufällig, linear interpoliert + Hann-Periodogramm": 65.0
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"thresholds": {
+"regelmäßig": 6.750071215757717,
+"Jitter ±0,25": 6.91266149433456,
+"zufällig": 6.793245684243649,
+"Nachtlücken": 6.767360361411003,
+"zufällig, linear interpoliert + Hann-Periodogramm": 161.83708341348196
+}
+}
+},
+{
+"task": "E",
+"params": {
+"line": 0.2,
+"snr": -3.0
+},
+"values": {
+"regelmäßig": 96.33333333333333,
+"Jitter ±0,25": 95.66666666666667,
+"zufällig": 93.66666666666667,
+"Nachtlücken": 26.666666666666668,
+"zufällig, linear interpoliert + Hann-Periodogramm": 24.0
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"thresholds": {
+"regelmäßig": 6.72676233516615,
+"Jitter ±0,25": 6.754647723406487,
+"zufällig": 6.612679460099574,
+"Nachtlücken": 6.014396759821625,
+"zufällig, linear interpoliert + Hann-Periodogramm": 159.91955044833136
+}
+}
+},
+{
+"task": "E",
+"params": {
+"line": 0.2,
+"snr": -6.0
+},
+"values": {
+"regelmäßig": 66.0,
+"Jitter ±0,25": 58.666666666666664,
+"zufällig": 47.0,
+"Nachtlücken": 14.666666666666666,
+"zufällig, linear interpoliert + Hann-Periodogramm": 5.333333333333333
+},
+"refs": {},
+"extra": {
+"runs": 300,
+"thresholds": {
+"regelmäßig": 6.254526982040164,
+"Jitter ±0,25": 6.576360044883544,
+"zufällig": 7.226281108494734,
+"Nachtlücken": 6.743959872282158,
+"zufällig, linear interpoliert + Hann-Periodogramm": 159.2749545388107
+}
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Chirp",
+"snr": null
+},
+"values": {
+"Spektrogramm (Gauß)": 0.0002820788332400036,
+"Neu zugeordnet": 1.8417928144221266e-05,
+"Synchrosqueezing": 0.00028319059454222156,
+"CWT-Kamm (Morlet)": 0.00011185267476377987,
+"Phasenableitung (21 geglättet)": 7.239268659861515e-06
+},
+"refs": {},
+"extra": {
+"runs": 1
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Chirp",
+"snr": 20.0
+},
+"values": {
+"Spektrogramm (Gauß)": 0.0003229173385763021,
+"Neu zugeordnet": 0.0001553581939762576,
+"Synchrosqueezing": 0.00033200024253402313,
+"CWT-Kamm (Morlet)": 0.0003456100908356801,
+"Phasenableitung (21 geglättet)": 0.0006479650534667819
+},
+"refs": {},
+"extra": {
+"runs": 20
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Chirp",
+"snr": 10.0
+},
+"values": {
+"Spektrogramm (Gauß)": 0.0005683326279190719,
+"Neu zugeordnet": 0.0004922333293795735,
+"Synchrosqueezing": 0.0005894064429099526,
+"CWT-Kamm (Morlet)": 0.0010284158888513944,
+"Phasenableitung (21 geglättet)": 0.002075428455588039
+},
+"refs": {},
+"extra": {
+"runs": 20
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Chirp",
+"snr": 0.0
+},
+"values": {
+"Spektrogramm (Gauß)": 0.003679978476398247,
+"Neu zugeordnet": 0.0036564581751775222,
+"Synchrosqueezing": 0.052109216143762904,
+"CWT-Kamm (Morlet)": 0.01562059715026468,
+"Phasenableitung (21 geglättet)": 0.02497310712884731
+},
+"refs": {},
+"extra": {
+"runs": 20
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Sinus-FM",
+"snr": null
+},
+"values": {
+"Spektrogramm (Gauß)": 0.004540102757860275,
+"Neu zugeordnet": 0.004525328655354819,
+"Synchrosqueezing": 0.005301246842790203,
+"CWT-Kamm (Morlet)": 0.0034747882136786155,
+"Phasenableitung (21 geglättet)": 0.002035817815425385
+},
+"refs": {},
+"extra": {
+"runs": 1
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Sinus-FM",
+"snr": 20.0
+},
+"values": {
+"Spektrogramm (Gauß)": 0.004559752532347327,
+"Neu zugeordnet": 0.004552171916785232,
+"Synchrosqueezing": 0.0069373967630022735,
+"CWT-Kamm (Morlet)": 0.003500865649831783,
+"Phasenableitung (21 geglättet)": 0.0021246458209141146
+},
+"refs": {},
+"extra": {
+"runs": 20
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Sinus-FM",
+"snr": 10.0
+},
+"values": {
+"Spektrogramm (Gauß)": 0.005182417675132422,
+"Neu zugeordnet": 0.00517376625628334,
+"Synchrosqueezing": 0.05536371601456114,
+"CWT-Kamm (Morlet)": 0.0037948624328915776,
+"Phasenableitung (21 geglättet)": 0.002921390497701502
+},
+"refs": {},
+"extra": {
+"runs": 20
+}
+},
+{
+"task": "F",
+"params": {
+"signal": "Sinus-FM",
+"snr": 0.0
+},
+"values": {
+"Spektrogramm (Gauß)": 0.01732982555963917,
+"Neu zugeordnet": 0.01732806935017947,
+"Synchrosqueezing": 0.12730972263017962,
+"CWT-Kamm (Morlet)": 0.029716918531620184,
+"Phasenableitung (21 geglättet)": 0.02670331890052182
+},
+"refs": {},
+"extra": {
+"runs": 20
+}
+},
+{
+"task": "G",
+"params": {
+"signal": "Blocks"
+},
+"values": {
+"Wavelet-SURE (D8, weich)": 0.3687008806266552,
+"Wavelet universal (hart)": 0.5130690639181161,
+"Fourier universal (hart)": 1.2546885406418913
+},
+"refs": {
+"verrauscht": 0.9903073768280073,
+"Fourier beste Schwelle (Orakel)": 0.9712488294446668,
+"Gleitender Mittelwert (Orakel, beste Breite)": 0.8585801503766268
+},
+"extra": {
+"runs": 40
+}
+},
+{
+"task": "G",
+"params": {
+"signal": "Bumps"
+},
+"values": {
+"Wavelet-SURE (D8, weich)": 0.3947503973152268,
+"Wavelet universal (hart)": 0.5397502192138993,
+"Fourier universal (hart)": 1.3474683818600592
+},
+"refs": {
+"verrauscht": 1.0112096798985677,
+"Fourier beste Schwelle (Orakel)": 0.9970696881389749,
+"Gleitender Mittelwert (Orakel, beste Breite)": 1.2711077224340352
+},
+"extra": {
+"runs": 40
+}
+},
+{
+"task": "G",
+"params": {
+"signal": "HeaviSine"
+},
+"values": {
+"Wavelet-SURE (D8, weich)": 0.10397662402551763,
+"Wavelet universal (hart)": 0.12416857547768204,
+"Fourier universal (hart)": 0.18831222688482036
+},
+"refs": {
+"verrauscht": 0.9905440295397986,
+"Fourier beste Schwelle (Orakel)": 0.17776180571954167,
+"Gleitender Mittelwert (Orakel, beste Breite)": 0.11789412206522745
+},
+"extra": {
+"runs": 40
+}
+},
+{
+"task": "G",
+"params": {
+"signal": "Doppler"
+},
+"values": {
+"Wavelet-SURE (D8, weich)": 0.23202905722216371,
+"Wavelet universal (hart)": 0.2476813743078381,
+"Fourier universal (hart)": 0.7845649339206903
+},
+"refs": {
+"verrauscht": 1.0136469673975932,
+"Fourier beste Schwelle (Orakel)": 0.6904965140103709,
+"Gleitender Mittelwert (Orakel, beste Breite)": 0.3920874243354366
+},
+"extra": {
+"runs": 40
+}
+}
+]
+}
