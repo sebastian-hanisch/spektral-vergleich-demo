@@ -1,7 +1,6 @@
 # Welches Verfahren, gemessen woran? Der Sieger steht im Szenarienmix – der Reuegrad zeigt, was robust ist – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-spektral-vergleich-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-spektral-vergleich-demo.streamlit.app/)**
 
 Sechzehnte und letzte Demo der Reihe **Spektral- und Wavelet-Analyse** in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“. Sie baut auf den Verfahren der Demos 1 bis 15 auf
 (Periodogramm, Multitaper, AR-Spektrum, Welch, Unterraumverfahren, Frequenzschätzer, Peak-oder-Rauschen-Tests, Lomb-Scargle, Spektrogramm, Neuzuordnung, Wavelets, Wavelet-Schrumpfung) und führt **keine neuen Verfahren** ein.
@@ -75,4 +74,4 @@ Gebaut mit Streamlit, Plotly und NumPy.
 
 ---
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zu den Demos: [Interaktive Demos](https://sebastianhanisch.net/demos.html).
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Spektren und Wavelets: von Fourier zum Vergleich](https://sebastianhanisch.net/konzepte-spektral-wavelet-analyse.html).
